@@ -15,6 +15,14 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        ResetPosition();
+    }
+
+    public void ResetPosition()
+    {
+        _rigidbody.position = Vector3.zero;
+        _rigidbody.velocity = Vector3.zero;
+
         AddStartingForce();
     }
 

@@ -686,9 +686,9 @@ GameObject:
   - component: {fileID: 514193603}
   - component: {fileID: 514193602}
   - component: {fileID: 514193601}
-  - component: {fileID: 514193604}
   - component: {fileID: 514193605}
   - component: {fileID: 514193606}
+  - component: {fileID: 514193607}
   m_Layer: 0
   m_Name: Left Paddle
   m_TagString: Untagged
@@ -808,20 +808,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &514193604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514193600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2146f5d0bd904a9989aea21f1258c92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boundY: 4.75
-  moveSpeed: 5
 --- !u!114 &514193605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +848,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &514193607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514193600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2146f5d0bd904a9989aea21f1258c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundY: 4.7
+  moveSpeed: 10
 --- !u!1 &708175237
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +892,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1452404001}
+  playerPaddle: {fileID: 0}
+  computerPaddle: {fileID: 0}
+  playerScoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!4 &708175239
 Transform:
   m_ObjectHideFlags: 0

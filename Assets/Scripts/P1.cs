@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class P1 : MonoBehaviour
 {
-    public float boundY = 4.75f;//Determines where the end of the screen is
+    public float boundY = 4.70f;//Determines where the end of the screen is
     public float moveSpeed = 10.0f;//Determines the speed of the paddle
 
     protected Rigidbody2D _rigidbody;

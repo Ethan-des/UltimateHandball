@@ -16,6 +16,7 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         ResetPosition();
+        AddStartingForce();
     }
 
     public void ResetPosition()
@@ -23,10 +24,10 @@ public class Ball : MonoBehaviour
         _rigidbody.position = Vector3.zero;
         _rigidbody.velocity = Vector3.zero;
 
-        AddStartingForce();
+        //AddStartingForce();
     }
 
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         //Greater than half means positive change in x, less than means negative
         float x = Random.value < 0.5f ? -1.0f : 1.0f;

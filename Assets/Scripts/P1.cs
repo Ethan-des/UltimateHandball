@@ -5,13 +5,9 @@ using UnityEngine;
 public class P1 : MonoBehaviour
 {
     public float boundY = 4.75f;//Determines where the end of the screen is
-    public float moveSpeed = 5f;//Determines the speed of the paddle
+    public float moveSpeed = 10.0f;//Determines the speed of the paddle
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    protected Rigidbody2D _rigidbody;
 
     // Update is called once per frame
     void Update()
@@ -40,5 +36,11 @@ public class P1 : MonoBehaviour
             pos.y = -boundY;
         }
         transform.position = pos;
+    }
+
+    public void ResetPosition()
+    {
+        _rigidbody.position = new Vector2(_rigidbody.position.x, 0.0f);
+        _rigidbody.velocity = Vector2.zero;
     }
 }

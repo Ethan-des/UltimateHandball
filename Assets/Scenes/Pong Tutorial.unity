@@ -892,10 +892,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1452404001}
-  playerPaddle: {fileID: 0}
+  playerPaddle: {fileID: 514193607}
   computerPaddle: {fileID: 0}
-  playerScoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
+  playerScoreText: {fileID: 97518689}
+  highScoreText: {fileID: 485575951}
 --- !u!4 &708175239
 Transform:
   m_ObjectHideFlags: 0

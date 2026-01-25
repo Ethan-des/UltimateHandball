@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private int _playerScore;
 
-    private int _computerScore;
+    private int _highScore;
 
     public void PlayerScores()
     {
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void ComputerScores()
     {
-        _computerScore++;
+        _highScore++;
         this.ball.ResetPosition();
         this.ball.AddStartingForce();
     }

@@ -13,6 +13,10 @@ public class BouncySurface : MonoBehaviour
         if(ball != null)
         {
             Vector2 normal = collision.GetContact(0).normal;
+
+            //Negative normal because we need to have the force
+            //in the opposite direction in order for it
+            // to properly increase speed
             ball.AddForce(-normal * this.bounceStrength);
         }
     }

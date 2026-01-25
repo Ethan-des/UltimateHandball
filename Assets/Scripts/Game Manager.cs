@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public void PlayerScores()
     {
         _playerScore++;
-        this.ball.ResetPosition();
+        //this.ball.ResetPosition();
     }
 
     public void ComputerScores()

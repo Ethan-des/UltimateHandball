@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour
         float x = Random.value < 0.5f ? -1.0f : 1.0f;
 
         //Dicates angles of ball
-        float y = Random.value < 0.5f ? -0.5f : 0.5f;
+        float y = 0.5f; //Random.value < 0f ? -0.5f : 0.5f;
 
         Vector2 direction = new Vector2(x, y);
         _rigidbody.AddForce(direction * this.speed);

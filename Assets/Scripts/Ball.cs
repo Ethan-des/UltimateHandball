@@ -6,6 +6,8 @@ public class Ball : MonoBehaviour
 {
     public float speed = 200.0f;
 
+    public GameOverZone end;
+
     private Rigidbody2D _rigidbody;
 
     private void Awake()
@@ -30,7 +32,7 @@ public class Ball : MonoBehaviour
     public void AddStartingForce()
     {
         //Greater than half means positive change in x, less than means negative
-        float x = Random.value < 0.5f ? -1.0f : 1.0f;
+        float x = -0.5f; //Random.value < 0.5f ? -1.0f : 1.0f;
 
         //Dicates angles of ball
         float y = 0.5f; //Random.value < 0f ? -0.5f : 0.5f;
@@ -42,5 +44,14 @@ public class Ball : MonoBehaviour
     public void AddForce(Vector2 force)
     {
         _rigidbody.AddForce(force);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Game Over Zone"))
+        {
+            Destroy(this.gameObject);
+            end.GameOver = true;
+        }
     }
 }

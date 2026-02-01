@@ -9,33 +9,38 @@ public class P1 : MonoBehaviour
 
     protected Rigidbody2D _rigidbody;
 
+    public GameOverZone stop;
+
     // Update is called once per frame
     void Update()
     {
         bool isPressingUp = Input.GetKey(KeyCode.UpArrow);
         bool isPressingDown = Input.GetKey(KeyCode.DownArrow);
 
-        if(isPressingUp)
+        if(stop.GameOver == false)
         {
-            transform.Translate(Vector2.up * Time.deltaTime * moveSpeed);
-        }
+            if (isPressingUp)
+            {
+                transform.Translate(Vector2.up * Time.deltaTime * moveSpeed);
+            }
 
-        if (isPressingDown)
-        {
-            transform.Translate(Vector2.down * Time.deltaTime * moveSpeed);
-        }
+            if (isPressingDown)
+            {
+                transform.Translate(Vector2.down * Time.deltaTime * moveSpeed);
+            }
 
-        //to keep inside the game screen
-        var pos = transform.position;
-        if (pos.y > boundY)
-        {
-            pos.y = boundY;
+            //to keep inside the game screen
+            var pos = transform.position;
+            if (pos.y > boundY)
+            {
+                pos.y = boundY;
+            }
+            else if (pos.y < -boundY)
+            {
+                pos.y = -boundY;
+            }
+            transform.position = pos;
         }
-        else if (pos.y < -boundY)
-        {
-            pos.y = -boundY;
-        }
-        transform.position = pos;
     }
 
     public void ResetPosition()

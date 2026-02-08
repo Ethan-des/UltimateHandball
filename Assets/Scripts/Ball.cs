@@ -21,6 +21,15 @@ public class Ball : MonoBehaviour
         AddStartingForce();
     }
 
+    private void Update()
+    {
+        if(transform.position.x < -10)
+        {
+            //Destroy(this.gameObject);
+            end.GameOver = true;
+        }
+    }
+
     public void ResetPosition()
     {
         _rigidbody.position = Vector3.zero;
@@ -46,12 +55,16 @@ public class Ball : MonoBehaviour
         _rigidbody.AddForce(force);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    //Collision is used when trigger is set to false
+    /*
+    private void OnCollisionEnter2D(Collider2D collision2D)
     {
-        if (other.gameObject.CompareTag("Game Over Zone"))
+        Debug.Log("I'm working!");
+        if (collision2D.gameObject.CompareTag("Game Over Zone"))
         {
             Destroy(this.gameObject);
             end.GameOver = true;
         }
     }
+    */
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,12 +18,13 @@ public class GameOverZone : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    private void OnTriggerEnter2D(Collider2D collision2D)
     {
-        if (other.gameObject.CompareTag("Ball"))
+        if (collision2D.gameObject.CompareTag("Ball"))
         {
-            Destroy(this.gameObject);
             GameOver = true;
         }
     }
+    
 }

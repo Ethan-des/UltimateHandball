@@ -24,6 +24,7 @@ public class GameOverZone : MonoBehaviour
         if (collision2D.gameObject.CompareTag("Ball"))
         {
             GameOver = true;
+            Debug.Log("it works");
         }
     }
     

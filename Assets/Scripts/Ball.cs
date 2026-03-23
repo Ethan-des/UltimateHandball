@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 250.0f;
+    public float speed = 500.0f;
 
     //public GameOverZone end;
 
@@ -31,6 +31,15 @@ public class Ball : MonoBehaviour
             //Destroy(this.gameObject);
             OutOfBounds = true;
         }
+
+        /*
+        if(OutOfBounds == true)
+        {
+            ResetPosition();
+            AddStartingForce();
+            OutOfBounds = false;
+        }
+        */
     }
     
 

@@ -18,6 +18,7 @@ public class BouncySurface : MonoBehaviour
             //in the opposite direction in order for it
             // to properly increase speed
             ball.AddForce(-normal * this.bounceStrength);
+            
         }
     }
 }

@@ -9,7 +9,15 @@ public class P1 : MonoBehaviour
 
     protected Rigidbody2D _rigidbody;
 
-    public GameOverZone stop;
+    public Ball b;
+
+    //void Awake() => Instance = this;
+
+    void Start()
+    {
+        b = FindObjectOfType<Ball>(); // <- You can't reference other scripts without this
+        Debug.Log(b.OutOfBounds);
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,8 +25,9 @@ public class P1 : MonoBehaviour
         bool isPressingUp = Input.GetKey(KeyCode.UpArrow);
         bool isPressingDown = Input.GetKey(KeyCode.DownArrow);
 
-        if(stop.GameOver == false)
+        if (b.OutOfBounds == false)
         {
+
             if (isPressingUp)
             {
                 transform.Translate(Vector2.up * Time.deltaTime * moveSpeed);

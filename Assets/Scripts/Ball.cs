@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 200.0f;
+    public float speed = 250.0f;
 
-    public GameOverZone end;
+    //public GameOverZone end;
+
+    public bool OutOfBounds = false;
 
     private Rigidbody2D _rigidbody;
 
@@ -21,14 +23,16 @@ public class Ball : MonoBehaviour
         AddStartingForce();
     }
 
+    
     private void Update()
     {
         if(transform.position.x < -10)
         {
             //Destroy(this.gameObject);
-            end.GameOver = true;
+            OutOfBounds = true;
         }
     }
+    
 
     public void ResetPosition()
     {
@@ -57,14 +61,15 @@ public class Ball : MonoBehaviour
 
     //Collision is used when trigger is set to false
     /*
-    private void OnCollisionEnter2D(Collider2D collision2D)
+    private void OnCollisionEnter2D(Collider2D Collision2D)
     {
-        Debug.Log("I'm working!");
-        if (collision2D.gameObject.CompareTag("Game Over Zone"))
+        Debug.Log("Game is now over");
+        if (Collision2D.gameObject.CompareTag("Game Over Zone"))
         {
             Destroy(this.gameObject);
             end.GameOver = true;
         }
     }
     */
+    
 }

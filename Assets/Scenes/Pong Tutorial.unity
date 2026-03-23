@@ -862,7 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundY: 4.7
   moveSpeed: 10
-  stop: {fileID: 562855191}
+  b: {fileID: 0}
 --- !u!1 &562855186
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &562855189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be4b6817028941b09e9b3d497e13b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1452404001}
+  ball: {fileID: 0}
   playerPaddle: {fileID: 514193607}
   computerPaddle: {fileID: 0}
   playerScoreText: {fileID: 97518689}
@@ -1203,8 +1203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8df664391e645aa890b0930531cb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
-  end: {fileID: 0}
+  speed: 250
+  OutOfBounds: 0
 --- !u!1 &1610932560
 GameObject:
   m_ObjectHideFlags: 0

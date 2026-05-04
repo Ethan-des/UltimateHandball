@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         if(_playerScore % 5 == 0)
         {
-            this.b.speed += 200.0f;
+            this.b.speed += 500.0f;
         }
 
         //Debug.Log("Ball Bounced on player paddle");

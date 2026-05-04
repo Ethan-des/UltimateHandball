@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet_Movement : MonoBehaviour
 {
-    public float bulletLife = 5f; //Defines how long bullet is on screen
+    public float bulletLife = 10000f; //Defines how long bullet is on screen
     public float rotation = 0f; //Bullet rotation
-    public float speed = 1f; //Bullet speed
+    public float speed = 5f; //Bullet speed
 
     private Vector2 spawnPoint; // Saves X and Y coordinates of where bullet first spawns
     private float timer = 0f; // Counts up when bullet is spawned
@@ -42,7 +42,7 @@ public class Bullet_Movement : MonoBehaviour
         //speed = how fast bullet moves
         //transform.right = how far in X and Y direction we should go
 
-        float x = timer * speed * transform.right.x;
+        float x = timer * speed * -transform.right.x;
         float y = timer * speed * transform.right.y;
 
         //Return a vector 2 that take our calculation and returns it to spawnPoint

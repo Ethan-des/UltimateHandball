@@ -55,6 +55,6 @@ public class P1 : MonoBehaviour
     public void ResetPosition()
     {
         _rigidbody.position = new Vector2(_rigidbody.position.x, 0.0f);
-        _rigidbody.velocity = Vector2.zero;
+        _rigidbody.linearVelocity = Vector2.zero;
     }
 }
